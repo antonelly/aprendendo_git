@@ -1,58 +1,62 @@
 # Version Control System (VCS)
 
-Local (LVCS): RCS
-Centralizado (CVCS): CVS, Subversion, Perforce.
-Distribuído (DVCS): Mercurial, Darcs, Git
+Local (LVCS): RCS  
+Centralizado (CVCS): CVS, Subversion, Perforce.<br>
+Distribuído (DVCS): Mercurial, Darcs, **Git**
 
 ## Estados de arquivos:
-1 - Modified: Arquivo modificado, mas ainda não enviado ao banco de dados - untracked files.
-2 - Staged: arquivo marcado para ser enviado ao banco de dados no próximo committ
-3 - Committed: Arquivo armazenado no banco de dados.
+**1. Modified:** Arquivo modificado, mas ainda não enviado ao banco de dados - _untracked files_.<br>
+**2. Staged:** arquivo marcado para ser enviado ao banco de dados no próximo committ - `git add`<br>
+**3. Committed:** Arquivo armazenado no banco de dados - `git commit`.
 
 ## Seções de um projeto Git
-1 - Working directory (working tree)
-2 - Staging area
-3 - Git directory (.git repository)
-
-Pesquisar sobre convenções em nomes de branchs.
+1. Working directory (working tree)<br>
+2. Staging area<br>
+3. Git directory (.git repository)
 
 # Comandos básicos
 
-git help <command>
+`git help <command>`<br>
+`git init`<br>
+`git remote add <apelido_url_pode_ser_origin> url`<br>
+`git clone url <nome_dir_local>` (eu não testei informar path_dir) <br>
+`git clone url --branch feature-1 --single-branch` (ainda não entendi)<br>
+`git status`<br>
+`git add <file_name>`<br>
+`git commit [-m] "mensagem_sucinta_usar_convenção"`<br>
+`git log`<br>
+`git restore <file_name>`<br>
+`git reset` (descobrir pra que serve)<br>
+`git reflog` (descobrir pra que sere)<br>
 
-git init
-git remote add <name_server> (usando origin) url
-git clone url <nome_dir_local>
-git clone url --branch feature-1 --single-branch
+### Trabalhando com [branch](https://git-scm.com/docs/user-manual#what-is-a-branch)
+`git checkout -b <nome_da_nova_branch>` -> Cria nova branch?<br>
+`git checkout <nome_da_branch>` -> Muda para outra branch<br>
+`git branch` -> Lista todas as branches **locais**<br>
+`git branch -r` -> Lista todas as branches **remotas**<br>
+`git branch -a` -> Lista todas as branches **locais e remotas** do projeto<br>
+`git branch -d | --delete <branch_name>` -> Deleta branch local<br>
+`git branch -v` -> Exibe último commit de cada branch<br>
 
-git status
+> Pesquisar sobre convenções em nomes de branches.
 
-git add <file_name>
-
-git commit [-m]
-git log
-git restore <file_name>
-git reset
-git reflog
-
-git checkout -b <nome_da_nova_branch>
-git checkout <nome_da_branch> #muda para outra branch
-git branch #lista todas as branches locais
-git branch -r #lista todas as branches remotas
-git branch -a #lista todas as branches locais e remotas do projeto
-git branch -d <branch_name>
-git branch -v #exibe último commit de cada branch)
-
-git push origin main
-
-git fetch #baixa as alterações do remoto para o local sem mesclar
-git merge #mescla as alterações baixadas
-git pull #junção git fetch + git merge
+### Sincronizando repositórios (remoto com local)
+`git push origin main` -> "Empurra" mudanças locais para remoto<br>
+`git fetch` -> Baixa alterações do remoto para o local **sem mesclar**<br>
+`git merge` -> Mescla alterações baixadas<br>
+`git pull` -> Junção `git fetch` + `git merge`
 
 # Melhor prática para um novo repositório:
-git init
-git branch -M main  #Renomeia a branch principal para 'main'
-git add .
-git commit -m _"Primeiro commit"_
-git remote add origin _<URL_DO_REPO>_
-git push -u _origin_ _main_
+1. `git init` -> Cria um repositório Git
+2. `git branch -M main`  -> Renomeia a branch principal para 'main'
+3. `git add .` -> Adiciona todos os arquivos à staging area
+4. `git commit -m "Descrição sucinta do commit. Seguir convenções."` -> Adiciona uma mensagem ao commit
+5. `git remote add origin <URL_DO_REPO>` -> Conecta repo local e remoto
+6. `git push -u origin main` ou `git push origin main`<br>
+Sem `-u`: informar `repo` e `branch` toda vez<br>
+Com `-u`: informar `repo` e `branch` somente na primeira vez
+
+# Referências
+1. [Compreendendo a história: O que é um ramo?](https://git-scm.com/docs/user-manual/pt_BR#what-is-a-branch) (_em inglês_)
+2. [Padrões e nomenclaturas no Git](https://github.com/JuniorLima22/padroes-e-nomenclaturas-no-git)
+3. [Markdown](https://github.com/luong-komorebi/Markdown-Tutorial/blob/master/README_pt-BR.md)
