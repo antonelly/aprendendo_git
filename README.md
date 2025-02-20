@@ -36,9 +36,10 @@ Distribuído (DVCS): Mercurial, Darcs, **Git**
 `git branch -r` -> Lista todas as branches **remotas**<br>
 `git branch -a` -> Lista todas as branches **locais e remotas** do projeto<br>
 `git branch -d | --delete <branch_name>` -> Deleta branch local<br>
+`git push origin <branch_to_be_deleted> --delete` -> Deleta branch remota <br>
 `git branch -v` -> Exibe último commit de cada branch<br>
 [^1]:https://git-scm.com/book/pt-br/v2/Branches-no-Git-Branches-em-poucas-palavras  
-[^2]:[https://git-scm.com/docs/user-manual#what-is-a-branch]
+[^2]:https://git-scm.com/docs/user-manual#what-is-a-branch
 > Pesquisar sobre convenções em nomes de branches.
 
 ### Sincronizando repositórios (remoto com local)
