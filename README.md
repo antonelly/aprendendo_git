@@ -29,15 +29,16 @@ Distribuído (DVCS): Mercurial, Darcs, **Git**
 `git reset` (descobrir pra que serve)<br>
 `git reflog` (descobrir pra que sere)<br>
 
-### Trabalhando com [branch](https://git-scm.com/docs/user-manual#what-is-a-branch)
-`git checkout -b <nome_da_nova_branch>` -> Cria nova branch?<br>
+### Trabalhando com branch[^1][^2]
+`git checkout -b <nome_da_nova_branch>` -> Cria nova branch<br>
 `git checkout <nome_da_branch>` -> Muda para outra branch<br>
 `git branch` -> Lista todas as branches **locais**<br>
 `git branch -r` -> Lista todas as branches **remotas**<br>
 `git branch -a` -> Lista todas as branches **locais e remotas** do projeto<br>
 `git branch -d | --delete <branch_name>` -> Deleta branch local<br>
 `git branch -v` -> Exibe último commit de cada branch<br>
-
+[^1]:https://git-scm.com/book/pt-br/v2/Branches-no-Git-Branches-em-poucas-palavras  
+[^2]:[https://git-scm.com/docs/user-manual#what-is-a-branch]
 > Pesquisar sobre convenções em nomes de branches.
 
 ### Sincronizando repositórios (remoto com local)
