@@ -40,7 +40,15 @@ Distribuído (DVCS): Mercurial, Darcs, **Git**
 `git branch -v` -> Exibe último commit de cada branch<br>
 [^1]:https://git-scm.com/book/pt-br/v2/Branches-no-Git-Branches-em-poucas-palavras  
 [^2]:https://git-scm.com/docs/user-manual#what-is-a-branch
+
 > Pesquisar sobre convenções em nomes de branches.
+
+>#### Exemplo:
+>Estou trabalhando na branch `feature-avaliacao` e quero integrar as novas funcionalidades
+na branch `main`.  
+>1.  Primeiro, eu vou para a branch `main` com `git checkout main` 
+>2. Eu mesclo as alterações com `git merge feature-avaliacao`
+
 
 ### Sincronizando repositórios (remoto com local)
 `git push origin main` -> "Empurra" mudanças locais para remoto<br>
