@@ -30,7 +30,7 @@ Distribuído (DVCS): Mercurial, Darcs, **Git**
 `git reflog` (descobrir pra que sere)<br>
 
 ### Trabalhando com branch[^1][^2]
-`git checkout -b <nome_da_nova_branch>` -> Cria nova branch<br>
+`git checkout -b <nome_da_nova_branch>` -> Cria nova branch e muda para ela<br>
 `git checkout <nome_da_branch>` -> Muda para outra branch<br>
 `git branch` -> Lista todas as branches **locais**<br>
 `git branch -r` -> Lista todas as branches **remotas**<br>
