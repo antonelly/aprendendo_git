@@ -1,5 +1,3 @@
-NOVA MÁQUINA CHERED CONECTADA À MINHA CONTA GITHUB
-
 # Version Control System (VCS)
 
 Local (LVCS): RCS  
@@ -18,7 +16,7 @@ Distribuído (DVCS): Mercurial, Darcs, **Git**
 
 # Comandos básicos
 
-`git help <command>`<br>
+>`git help <command>`<br>
 `git init`<br>
 `git remote add <apelido_url_pode_ser_origin> url`<br>
 `git clone url <nome_dir_local>` (eu não testei informar path_dir) <br>
@@ -32,7 +30,7 @@ Distribuído (DVCS): Mercurial, Darcs, **Git**
 `git reflog` (descobrir pra que sere)<br>
 
 ### Trabalhando com branch[^1][^2]
-`git checkout -b <nome_da_nova_branch>` -> Cria nova branch e muda para ela<br>
+>`git checkout -b <nome_da_nova_branch>` -> Cria nova branch e muda para ela<br>
 `git checkout <nome_da_branch>` -> Muda para outra branch<br>
 `git branch` -> Lista todas as branches **locais**<br>
 `git branch -r` -> Lista todas as branches **remotas**<br>
@@ -43,30 +41,40 @@ Distribuído (DVCS): Mercurial, Darcs, **Git**
 [^1]:https://git-scm.com/book/pt-br/v2/Branches-no-Git-Branches-em-poucas-palavras  
 [^2]:https://git-scm.com/docs/user-manual#what-is-a-branch
 
-> Pesquisar sobre convenções em nomes de branches.
+> **Pesquisar sobre convenções em nomes de branches.**
 
 >#### Exemplo:
 >Estou trabalhando na branch `feature-avaliacao` e quero integrar as novas funcionalidades
-na branch `main`.  
+na branch `main`.
 >1.  Primeiro, eu vou para a branch `main` com `git checkout main` 
 >2. Eu mesclo as alterações com `git merge feature-avaliacao`
 
-
 ### Sincronizando repositórios (remoto com local)
-`git push origin main` -> "Empurra" mudanças locais para remoto<br>
+>`git push origin main` -> "Empurra" mudanças locais para remoto<br>
 `git fetch` -> Baixa alterações do remoto para o local **sem mesclar**<br>
 `git merge` -> Mescla alterações baixadas<br>
 `git pull` -> Junção `git fetch` + `git merge`
 
 # Melhor prática para um novo repositório:
-1. `git init` -> Cria um repositório Git
-2. `git branch -M main`  -> Renomeia a branch principal para 'main'
-3. `git add .` -> Adiciona todos os arquivos à staging area
-4. `git commit -m "Descrição sucinta do commit. Seguir convenções."` -> Adiciona uma mensagem ao commit
-5. `git remote add origin <URL_DO_REPO>` -> Conecta repo local e remoto
-6. `git push -u origin main` ou `git push origin main`<br>
+>1. `git init` -> Cria um repositório Git
+>2. `git branch -M main`  -> Renomeia a branch principal para 'main'
+>3. `git add .` -> Adiciona todos os arquivos à staging area
+>4. `git commit -m "Descrição sucinta do commit. Seguir convenções."` -> Adiciona uma mensagem ao commit
+>5. `git remote add origin <URL_DO_REPO>` -> Conecta repo local e remoto
+>6. `git push -u origin main` ou `git push origin main`<br>
 Sem `-u`: informar `repo` e `branch` toda vez<br>
 Com `-u`: informar `repo` e `branch` somente na primeira vez
+
+# Coisas que ainda não sei pra que servem, nem como funcionam
+>`git flow feature start minha-feature`<br>
+\# O que faz esse comando?<br><br>
+`git flow feature finish minha-feature`<br>
+\# E esse?
+
+>`git flow release start 1.0.0`<br>
+\# Descubra o que faz esse aqui também<br><br>
+`git flow release finish 1.0.0`<br>
+\#E esse...
 
 # Referências
 1. [Compreendendo a história: O que é um ramo?](https://git-scm.com/docs/user-manual/pt_BR#what-is-a-branch) (_em inglês_)
